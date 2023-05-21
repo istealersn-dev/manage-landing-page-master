@@ -1,0 +1,15 @@
+{
+  "name": "manage-landing-page-master",
+  "version": "0.0.1",
+  "description": "Manage landing page from Frontendmentor.io",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "Yes"
+  },
+  "author": "istealersn-dev",
+  "license": "MIT"
+}
