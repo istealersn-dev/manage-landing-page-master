@@ -3,30 +3,22 @@
   "version": "0.0.1",
   "description": "Manage landing page from Frontendmentor.io",
   "main": "index.html",
-  "scripts": {
-    "start": "webpack serve --mode development",
-    "build": "webpack --mode production"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/istealersn-dev/manage-landing-page-master"
-  },
+  "repository": "https://github.com/istealersn-dev/manage-landing-page-master",
   "author": "istealersn-dev",
   "license": "MIT",
+  "private": false,
   "dependencies": {
     "@babel/core": "^7.21.8",
     "@babel/preset-env": "^7.21.5",
-    "babel-loader": "^9.1.2",
-    "css-loader": "^6.7.4",
-    "html-webpack-plugin": "^5.5.1",
-    "sass-loader": "^13.2.2",
-    "webpack": "^5.83.1",
-    "webpack-cli": "^5.1.1",
-    "webpack-dev-server": "^4.15.0"
-  },
-  "devDependencies": {
-    "html-loader": "^4.2.0",
-    "mini-css-extract-plugin": "^2.7.6",
-    "node-sass": "^8.0.0"
+    "autoprefixer": "^10.4.14",
+    "browser-sync": "^2.29.3",
+    "cssnano": "^6.0.1",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-postcss": "^9.0.1",
+    "gulp-sass": "^5.1.0",
+    "gulp-terser": "^2.1.0",
+    "postcss": "^8.4.23",
+    "sass": "^1.62.1"
   }
 }

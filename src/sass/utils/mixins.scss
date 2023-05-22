@@ -12,3 +12,14 @@ $breakpoints: (
     @error "Invalid breakpoint: #{$breakpoint}.";
   }
 }
+
+// Font weight, Font size and Line height mixin
+@mixin fonts($props) {
+  $fw: if(map-has-key($props, font-weight ), map-get($props, font-weight), $font);
+  $fs: map-get($props, font-size);
+  $lh: map-get($props, line-height);
+
+  font-weight: $fw;
+  font-size: $fs;
+  line-height: $lh;
+}

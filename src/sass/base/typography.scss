@@ -1,4 +1,4 @@
-@use "variables";
+@use 'variables' as *;
 
 @import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&display=swap");
 
@@ -70,4 +70,10 @@ $frm-placeholder: (
     font-weight: 400,
     font-size: .8125rem,
     line-height: 1.1875rem
+);
+
+$nav: (
+  font-weight: 500,
+  font-size: .8125rem,
+  line-height: 1.1875rem
 )

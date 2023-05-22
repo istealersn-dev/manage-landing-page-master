@@ -1,0 +1,11 @@
+@use "../../utils/mixins" as *;
+@use '../../base/typography' as *;
+@use '../../base/colors' as *;
+
+.primaryBtn {
+    @include fonts($nav);
+    padding: .75rem 2rem .8125rem;
+    color: white;
+    background-color: $bright-red;
+    border-radius: 1.375rem;
+}

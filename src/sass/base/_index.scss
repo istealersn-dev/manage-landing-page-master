@@ -1,4 +1,4 @@
-@use 'colors';
-@use 'reset';
-@use 'typography';
-@use 'variables';
+@forward 'colors';
+@forward 'reset';
+@forward 'typography';
+@forward 'variables';
