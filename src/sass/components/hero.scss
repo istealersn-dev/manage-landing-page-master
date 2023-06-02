@@ -1,0 +1,27 @@
+@use '../utils/' as *;
+@use '../base/' as *;
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.1875rem;
+    padding-top: 3rem;
+
+    &__content {
+        text-align: center;
+
+        h1 {
+            @include fonts($h1-sm);
+            color: $dark-blue;
+            margin-bottom: .5625rem;
+            letter-spacing: -0.0625rem;
+        }
+
+        p {
+            @include fonts($para);
+            color: $dark-greyish-blue;
+            margin-bottom: 1.8125rem;
+        }
+    }
+}

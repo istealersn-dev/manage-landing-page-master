@@ -28,6 +28,12 @@ $h2-sm: (
 /*Custom typographies------------------------------*/
 
 $para: (
+  font-weight: $light,
+  font-size: 1rem,
+  line-height: 1.75rem,
+);
+
+$para-sm: (
   font-weight: $regular,
   font-size: 0.875rem,
   line-height: 1.75rem,
@@ -73,7 +79,11 @@ $frm-placeholder: (
 );
 
 $nav: (
-  font-weight: 500,
   font-size: .8125rem,
   line-height: 1.1875rem
+);
+
+$fmBtn: (
+  font-size: .8125rem,
+  line-height: .8125rem
 )

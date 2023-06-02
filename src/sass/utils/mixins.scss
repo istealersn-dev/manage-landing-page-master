@@ -1,3 +1,5 @@
+@use "../base/variables" as *;
+
 $breakpoints: (
   'sm': 23.4375rem,
   'lg': 90rem,
@@ -15,7 +17,7 @@ $breakpoints: (
 
 // Font weight, Font size and Line height mixin
 @mixin fonts($props) {
-  $fw: if(map-has-key($props, font-weight ), map-get($props, font-weight), $font);
+  $fw: if(map-has-key($props, font-weight), map-get($props, font-weight), $bold);
   $fs: map-get($props, font-size);
   $lh: map-get($props, line-height);
 

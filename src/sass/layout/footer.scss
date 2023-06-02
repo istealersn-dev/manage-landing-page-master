@@ -1,0 +1,59 @@
+@use '../base/' as *;
+@use '../utils/' as *;
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $very-dark-blue;
+
+    &__sub {
+        padding-top: 3.1875rem;
+
+        & > form > input {
+            @include fonts($frm-placeholder);
+            padding-left: 1.5rem;
+            border-radius: 1.375rem;
+            height: 2.75rem;
+            width: 14.9375rem;
+            margin-right: .5rem;
+        }
+    }
+
+    &__column {
+        display: flex;
+        flex-direction: row;
+        margin-top: 3.375rem;
+        margin-bottom: 3.125rem;
+        gap: 6.625rem;
+        @include fonts($foo-links);
+        color: white;
+
+         & > div > ul > li {
+            margin-bottom: .8125rem;
+        }
+    }
+
+    &__social {
+        display: flex;
+        flex-direction: row;
+        gap: 2.125rem;
+        margin-bottom: 3.375rem;
+
+        & > img {
+            aspect-ratio: 1 / 1;
+            width: 2rem;
+        }
+    }
+
+    &__logo {
+        margin-bottom: 3.125rem;
+    }
+
+    &__copyright {
+        margin-bottom: 1.875rem;
+        @include fonts($frm-placeholder);
+        color: $very-light-gray;
+        opacity: 0.5;
+    }
+}

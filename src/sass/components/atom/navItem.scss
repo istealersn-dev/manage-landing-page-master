@@ -1,0 +1,15 @@
+@use "../../utils/mixins" as *;
+@use '../../base/typography' as *;
+@use '../../base/colors' as *;
+
+.navItem {
+     @include fonts($nav);
+     color: $dark-blue;
+     display: flex;
+     flex-direction: row;
+     gap: 2rem;
+
+     li, a {
+        color: inherit;
+     }
+}

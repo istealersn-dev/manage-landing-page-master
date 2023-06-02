@@ -29,6 +29,7 @@ dd {
 ul,
 ol {
   list-style: none;
+  padding: inherit;
 }
 
 html {
@@ -41,7 +42,7 @@ html:focus-within {
 }
 
 body {
-    min-height: 100vh;
+    height: 100vh;
     max-width: 1440px;
     text-rendering: optimizeSpeed;
     font-size: 100%;
@@ -52,6 +53,7 @@ body {
 a, a:not([class]) {
     text-decoration-skip-ink: auto;
     text-decoration: none;
+    color: inherit;
 }
 
 img {

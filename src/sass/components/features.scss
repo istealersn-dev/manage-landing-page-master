@@ -1,0 +1,78 @@
+@use '../utils/' as *;
+@use '../base/' as *;
+
+.features {
+    margin-top: 5.8125rem;
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: .8125rem;
+        text-align: center;
+        max-width: 20.1875rem;
+
+        & > h2 {
+            @include fonts($h2-sm);
+            color: $dark-blue
+        }
+
+        & > p {
+            @include fonts($para-sm);
+            color: $dark-greyish-blue;
+        }
+    }
+
+    &__list {
+        margin-top: 3.375rem;
+        width: calc(100vw - 3rem);
+
+        &-group {
+            display: flex;
+            flex-direction: column;
+            gap: 2.9375rem;
+            
+            &-items {
+
+                counter-increment: countUp;
+                position: relative;
+
+                &::before {
+                    content: counter(countUp, decimal-leading-zero);
+                    display: inline-block;
+                    padding: .375rem 1.4375rem .625rem 1.5625rem;
+                    max-width: 4.1875rem;
+                    max-height: 2.4375rem;
+                    border-radius: 2.4375rem;
+                    background-color: $bright-red;
+                    color: $bg-color;
+                    @include fonts($list);
+                    text-align: center;
+                    position: absolute;
+                    inset: 0;
+                    margin-left: -.5rem;
+                    margin-right: .9375rem;
+                }
+
+                & > span {
+                    display: block;
+                    background-color: $very-pale-red;
+                    @include fonts($list);
+                    color: $dark-blue;
+                    height: 2.4375rem;
+                    width: calc(100vw - 1.0625rem);
+                    padding-left: 4.875rem;
+                    padding-top: .375rem;
+                    padding-bottom: .625rem;
+                    margin-left: -0.4375rem;
+                    margin-bottom: .5rem;
+                }
+
+                & > p {
+                    @include fonts($para-sm);
+                    color: $dark-greyish-blue;
+                    margin-left: -.5rem;
+                }
+            }
+        }
+    }
+}

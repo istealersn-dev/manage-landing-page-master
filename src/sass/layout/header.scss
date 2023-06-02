@@ -1,0 +1,22 @@
+.header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 2.5625rem;
+
+    &__logo {
+        max-width: 6.875rem;
+    }
+
+    &__nav {
+
+        .navItem {
+            display: none;
+        }
+    }
+
+    &__cta {
+        display: none;
+    }
+}

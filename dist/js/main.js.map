@@ -1,1 +1,1 @@
-{"version":3,"sources":["main.js"],"names":["require"],"mappings":"AAAA,aAAAA,QAAA","file":"main.js","sourcesContent":["import '../sass/main.scss'"]}
+{"version":3,"sources":["main.js"],"names":["require"],"mappings":"AAAA,aAAAA,QAAA","file":"main.js","sourcesContent":["import '../sass/main.scss';"]}
