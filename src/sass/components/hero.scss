@@ -8,20 +8,46 @@
     gap: 1.1875rem;
     padding-top: 3rem;
 
+    @include respond-to('lg') {
+        flex-direction: row-reverse;
+        gap: 5.625rem;
+    }
+
+    & > img {
+
+        @include respond-to('lg') {
+            width: 33.75rem;
+        }
+    }
+
     &__content {
         text-align: center;
+
+        @include respond-to('lg') {
+            text-align: left;
+        }
 
         h1 {
             @include fonts($h1-sm);
             color: $dark-blue;
             margin-bottom: .5625rem;
             letter-spacing: -0.0625rem;
+
+            @include respond-to('lg') {
+                @include fonts($h1);
+                margin-bottom: 1rem;
+            }
         }
 
         p {
             @include fonts($para);
             color: $dark-greyish-blue;
             margin-bottom: 1.8125rem;
+
+            @include respond-to('lg') {
+                max-width: 21.875rem;
+                margin-bottom: 2.5rem;
+            }
         }
     }
 }

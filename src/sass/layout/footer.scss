@@ -7,6 +7,14 @@
     align-items: center;
     background-color: $very-dark-blue;
 
+    @include respond-to('lg') {
+        flex-direction: row-reverse;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        padding: 3.875rem 10.3125rem;
+
+    }
+
     &__sub {
         padding-top: 3.1875rem;
 
@@ -40,6 +48,10 @@
         gap: 2.125rem;
         margin-bottom: 3.375rem;
 
+        @include respond-to('lg') {
+            
+        }
+
         & > img {
             aspect-ratio: 1 / 1;
             width: 2rem;
@@ -56,4 +68,12 @@
         color: $very-light-gray;
         opacity: 0.5;
     }
+}
+
+.flex {
+    flex: 1 0 33.33%;
+}
+
+.flex:nth-child(-n + 2) {
+    flex-basis: 66.66%;
 }

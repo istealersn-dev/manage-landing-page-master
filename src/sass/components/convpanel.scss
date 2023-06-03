@@ -11,10 +11,29 @@
     background-repeat: no-repeat;
     background-position: -0.9375rem;
 
+    @include respond-to('lg') {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 3.875rem 10.3125rem;
+    }
+
     & > h2 {
         font-size: 2.5rem;
         padding-bottom:  1.8125rem;
         letter-spacing: -0.0625rem;
         max-width: 19.5rem;
+
+        @include respond-to('lg') {
+            padding-bottom: 0;
+            font-size: 2.5rem;
+            line-height: 2.75rem;
+            font-weight: 700;
+            max-width: 31.25rem;
+            text-align: left;
+
+        }
     }
+
 }

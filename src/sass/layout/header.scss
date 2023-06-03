@@ -1,9 +1,18 @@
+@use '../utils/' as *;
+@use '../base/' as *;
+
 .header {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    margin-top: 2.5625rem;
+    padding-top: 2.5625rem;
+
+    @include respond-to('lg') {
+        padding-top: 3.5rem;
+        color: $dark-blue;
+        background-image: url('/images/bg-simplify-section-desktop.svg');
+    }
 
     &__logo {
         max-width: 6.875rem;
@@ -11,12 +20,33 @@
 
     &__nav {
 
+        @include respond-to('lg') {
+
+            .mobileNav {
+                display: none;
+            }
+        }
+
         .navItem {
             display: none;
+
+            @include respond-to('lg') {
+                display: flex;
+                flex-direction: row;
+                @include fonts($nav);
+            }
+
+            & > li:hover {
+                opacity: 0.5;
+            }
         }
     }
 
     &__cta {
         display: none;
+
+        @include respond-to('lg') {
+            display: inline-block;
+        }
     }
 }
