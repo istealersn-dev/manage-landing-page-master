@@ -1,0 +1,75 @@
+@use '../base/' as *;
+@use '../utils/' as *;
+
+.testimonial {
+    margin: 3.875rem 1.0625rem 2.625rem 1.125rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    & > h2 {
+        @include fonts($testimonial-h);
+        color: $dark-blue;
+        margin-bottom: 2.25rem;
+    }
+
+    &__cards {
+        margin-top: 3.875rem;
+        position: relative;
+
+        &__content {
+            color: $dark-blue;
+            background-color: $very-light-gray;
+            margin-bottom: 1.625rem;
+            position: relative;
+            display: none;
+            max-width: 33.75rem;
+            transition: display 2s ease-in-out;
+
+            &--authpic {
+                position: absolute;
+                width: 4.5rem;
+                height: auto;
+                aspect-ratio: 1 / 1;
+                top: -2.1875rem;
+                left: 8rem;
+            }
+
+            &--authname {
+                @include fonts($testimonial-auth);
+                padding-top: 3.75rem;
+                padding-bottom: 1.1875rem;
+            }
+
+            &--quote {
+                @include fonts($testimonial-q);
+                padding: 0px 1.3125rem 2.625rem;
+                opacity: 0.5;
+            }
+
+            &.active {
+                display: block;
+            }
+        }
+}
+
+    &__dots {
+        margin-bottom: 2.9375rem;
+
+        &--dot {
+            display: inline-block;
+            width: .4375rem;
+            height: auto;
+            aspect-ratio: 1 / 1;
+            border-radius: .2188rem;
+            border: .0625rem solid $bright-red;
+            cursor: pointer;
+            margin-right: .3125rem;
+    
+            &.active {
+                background-color: $bright-red;
+            }
+        }
+    }
+}
