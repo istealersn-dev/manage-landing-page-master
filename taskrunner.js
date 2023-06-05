@@ -4,6 +4,8 @@ const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
 const babel = require('gulp-babel');
+const concat = require('gulp-concat');
+const uglify = require('gulp-uglify');
 const terser = require('gulp-terser');
 const browsersync = require('browser-sync').create();
 
@@ -15,12 +17,14 @@ function sassCompile() {
 		.pipe(dest('dist/css', { sourcemaps: 'map'}));
 }
 
-// Javascript compilation
+// Javascript compilation & bundling
 function jsCompile() {
-	return src('src/js/main.js', { sourcemaps: true })
+	return src('src/js/*')
 		.pipe(babel({ presets: ['@babel/preset-env'] }))
+		.pipe(concat('master.js'))
+		.pipe(uglify())
 		.pipe(terser())
-		.pipe(dest('dist/js', { sourcemaps: '.'}));
+		.pipe(dest('dist/js'));
 }
 
 // Browser sync setup

@@ -31,12 +31,22 @@
           <li><a href="#">Community</a></li>
         </ol>
         <div
-          class="mobileNav"
+          class="header__nav__mobileNav"
           role="menu"
           aria-label="Mobile navigation"
-          aria-expanded="fal"
+          aria-expanded="false"
         >
-          <img src="./images/icon-hamburger.svg" alt="Mobile navigation" />
+          <img src="./images/icon-hamburger.svg" alt="Hamburger icon" id="hamburger" class="open"/>
+          <div class="header__nav__mobileNav--menu close" id="close">
+            <img src="./images/icon-close.svg" alt="Close icon" aria-label="Close menu">
+            <ul class="header__nav__mobileNav--menu-item">
+              <li><a href="#">Pricing</a></li>
+              <li><a href="#">Product</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Community</a></li>
+            </ul>
+          </div>
         </div>
       </nav>
       <div class="header__cta">
@@ -240,6 +250,6 @@
       </a>
       <span class="footer__copyright">Copyright 2020. All Rights Reserved</span>
     </footer>
-    <script src="dist/js/main.js" preload></script>
+    <script type="module" src="dist/js/master.js" ></script>
   </body>
 </html>
