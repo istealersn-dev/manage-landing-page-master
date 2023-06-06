@@ -1,7 +1,9 @@
 // Get the testimonial slides and dots
-   const carousel = document.querySelectorAll('.testimonial__cards__content');
-   const dots = document.querySelector('.testimonial__dots');
-   
+const carousel = document.querySelectorAll('.testimonial__cards__content');
+const dots = document.querySelector('.testimonial__dots');
+
+// Check if the viewport width is within the mobile range
+if (window.innerWidth <=375) {
    // Initialise the index of the active slide
    let activeCard = 0;
    
@@ -39,3 +41,4 @@
    // Initiate setup
    showCard();
    updateActiveDot();
+};

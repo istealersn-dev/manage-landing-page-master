@@ -25,9 +25,11 @@
 
             & > img {
                 cursor: pointer;
+                display: none;
             }
 
             &--menu {
+                display: none;
                 position: absolute;
                 top: 0;
                 left: -24px;
@@ -92,12 +94,4 @@
             display: inline-block;
         }
     }
-}
-
-.close {
-    display: none;
-}
-
-.open {
-    display: block;
 }

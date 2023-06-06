@@ -15,8 +15,24 @@
     }
 
     &__cards {
-        margin-top: 3.875rem;
+        padding-top: 3.875rem;
         position: relative;
+
+        @include respond-to('lg') {
+            display: flex;
+            margin-top: 0px;
+            padding-top: 6.25rem;
+            overflow-x: scroll;
+            scroll-behavior: smooth;
+            scroll-snap-type: x mandatory;
+            scroll-padding: 0 20px; /* Add padding to prevent cards from snapping to the edges */
+            -ms-overflow-style: none; /* Hide scrollbar for Internet Explorer and Edge */
+            scrollbar-width: none; /* Hide scrollbar for Firefox */
+        }
+
+        &::-webkit-scrollbar {
+            display: none; /* Hide scrollbar for Chrome, Safari, and Opera */
+        }
 
         &__content {
             color: $dark-blue;
@@ -27,6 +43,13 @@
             max-width: 33.75rem;
             transition: display 2s ease-in-out;
 
+            @include respond-to('lg') {
+                display: block;
+                flex: 0 0 33.75rem;
+                margin-right: 1.875rem;
+                scroll-snap-align: start;
+            }
+
             &--authpic {
                 position: absolute;
                 width: 4.5rem;
@@ -34,12 +57,22 @@
                 aspect-ratio: 1 / 1;
                 top: -2.1875rem;
                 left: 8rem;
+                z-index: 1;
+
+                @include respond-to('lg') {
+                    left: 14.5rem;
+                    height: 4.5rem;
+                }
             }
 
             &--authname {
                 @include fonts($testimonial-auth);
                 padding-top: 3.75rem;
                 padding-bottom: 1.1875rem;
+
+                @include respond-to('lg') {
+                    
+                }
             }
 
             &--quote {
@@ -66,6 +99,10 @@
             border: .0625rem solid $bright-red;
             cursor: pointer;
             margin-right: .3125rem;
+
+            @include respond-to('lg') {
+                display: none;
+            }
     
             &.active {
                 background-color: $bright-red;
